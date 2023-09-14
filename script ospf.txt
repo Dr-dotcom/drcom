@@ -1,0 +1,25 @@
+
+------R1------
+enable
+configure terminal
+router ospf 10
+router-id 1.1.1.1
+network #.#.#.# #.#.#.# area #
+passive-interface g0/0/0
+
+------R2------
+enable
+configure terminal
+router ospf 10
+router-id 2.2.2.2
+network #.#.#.# #.#.#.# area #
+passive-interface g0/0/0
+
+------R3------
+enable
+configure terminal
+router ospf 10
+router-id 3.3.3.3
+interface g0/0/0
+ip ospf 10 area 0
+passive-interface g0/0/0
